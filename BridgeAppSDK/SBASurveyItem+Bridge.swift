@@ -217,9 +217,9 @@ extension SBBSurveyQuestion : SBAFormStepSurveyItem, SBASurveyRuleGroup {
         // If this multiple choice should have an "other" option then include the string as a choice
         if (multiConstraints.allowOtherValue) {
             var other = Localization.localizedString("SBA_OTHER")
-            if (items.filter({ ($0 as! SBBSurveyQuestionOption).hasUppercaseLetters }).count == 0) {
-                other = other.lowercased()
-            }
+//            if (items.filter({ ($0 as! SBBSurveyQuestionOption).hasUppercaseLetters }).count == 0) {
+//                other = other.lowercased()
+//            }
             return (items as NSArray).adding(NSString(string: other)) as [Any]
         }
         
@@ -279,32 +279,32 @@ extension SBBSurveyRule: SBASurveyRuleItem {
     }
 }
 
-extension SBBSurveyQuestionOption: SBATextChoice {
-    
-    public var choiceDataGroups: [String] {
-        return [String(describing: self.value)]
-    }
-
-    public var choiceText: String {
-        return self.label
-    }
-    
-    public var choiceDetail: String? {
-        return self.detail;
-    }
-    
-    public var choiceValue: NSCoding & NSCopying & NSObjectProtocol {
-        return self.value!
-    }
-    
-    public var exclusive: Bool {
-        return false
-    }
-    
-    public var hasUppercaseLetters: Bool {
-        return self.label.lowercased() != self.label
-    }
-}
+//extension SBBSurveyQuestionOption: SBATextChoice {
+//
+//    public var choiceDataGroups: [String] {
+//        return [String(describing: self.value)]
+//    }
+//
+//    public var choiceText: String {
+//        return self.label
+//    }
+//
+//    public var choiceDetail: String? {
+//        return self.detail;
+//    }
+//
+//    public var choiceValue: NSCoding & NSCopying & NSObjectProtocol {
+//        return self.value!
+//    }
+//
+////    public var exclusive: Bool {
+////        return false
+////    }
+////
+//    public var hasUppercaseLetters: Bool {
+//        return self.label.lowercased() != self.label
+//    }
+//}
 
 public protocol sbb_DateRange : SBADateRange {
     var allowFutureValue: Bool { get }

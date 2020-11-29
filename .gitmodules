@@ -1,6 +1,7 @@
-[submodule "BridgeSDK"]
-	path = BridgeSDK
-	url = https://github.com/Sage-Bionetworks/Bridge-iOS-SDK.git
 [submodule "ResearchUXFactory"]
 	path = ResearchUXFactory
-	url = https://github.com/Sage-Bionetworks/ResearchUXFactory-iOS.git
+	url = https://github.com/KeyWise/ResearchUXFactory-iOS.git
+
+[submodule "BridgeSDK"]
+	path = BridgeSDK
+	url = https://github.com/KeyWise/Bridge-iOS-SDK
